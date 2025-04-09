@@ -1,0 +1,457 @@
+body {
+    background-color: #0a0a0a;
+    animation: gtaGlow 5s infinite alternate ease-in-out;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@keyframes gtaGlow {
+    0% { background-color: #0a0a0a; }
+    100% { background-color: #0d0e12; }
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navigation Bar */
+nav {
+   height: 70px;
+    text-align: right;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1000;
+    background-color: #0a0a0a;
+    animation: gtaGlow 5s infinite alternate ease-in-out;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@keyframes gtaGlow {
+    0% { background-color: #0a0a0a; }
+    100% { background-color: #0d0e12; }
+}
+
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    margin: 20px;
+    display: flex;
+    justify-content: right;
+    gap: 25px; /* Adjust spacing between items */
+}
+
+
+nav ul li {
+    display: inline-block; /* Keeps items in line */
+    margin: 10px;
+   
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #C0C0C0;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative; /* Needed for underline */
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+    padding: 5px 0; /* Controls text height without extra space */
+}
+
+
+/* Underline Effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position slightly below text */
+    width: 0%;
+    height: 2px;
+    background: #00AAFF; /* Neon Blue */
+    box-shadow: 0 0 5px #00AAFF, 0 0 10px #00AAFF; /* Neon Glow */
+    transition: width 0.3s ease-in-out;
+}
+
+
+/* Hover Effects */
+nav ul li a:hover {
+    color: #00AAFF; /* Neon blue text */
+}
+
+
+nav ul li a:hover::after {
+    width: 100%; /* Expands fully */
+}
+
+
+/* Active Link Effect */
+nav ul li a:active {
+    color: #EAEAEA;
+    text-shadow: 0 0 10px #EAEAEA;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Home Section */
+#home {
+    color: #0d0e12;
+}
+
+
+.homepage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding: 3rem calc((100vw - 1300px) / 2) ;
+}
+
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #C0C0C0;
+    padding: 0rem 2rem;
+}
+
+
+.leftside h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+
+.leftside p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+.rightside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    background: transparent; /* Keeps the background clean and simple */
+}
+
+
+.rightside img {
+    max-width: 70%; /* Keeps the image proportional */
+    max-height: 70%;
+    border-radius: 15px; /* Adds slight rounding for a softer look */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.385); /* Subtle glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+
+.rightside img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 25px #00AAFF,
+                0 0 50px #00aaffd1; /* Intensifies the glow on hover */
+}
+
+
+
+
+#about {
+    min-height: 400px;
+}
+
+
+.flip-card-container {
+    display: flex; /* Aligns cards side by side */
+    justify-content: center; /* Adds space between cards */
+    align-items: center; /* Centers cards vertically */
+    gap: 20px; /* Adds spacing between cards */
+    margin: 100px auto; /* Centers container horizontally */
+   
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 360px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin: 60px;
+    margin-top: 27vh;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #0d0e12;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #5d6582 60%, #656e8d 88%, #323645 40%, #282b37 48%);
+    color: #0d0e12;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #3d4255 30%, #0d0e12 88%, #303442 40%, #323645 78%);
+    color: #C0C0C0;
+    transform: rotateY(180deg);
+}
+
+/* Contact Section */
+#contact {
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #0d0e12;
+    color: #C0C0C0;
+    padding: 50px 0;
+}
+
+
+.contactpage .right, .contactpage .left {
+    text-align: center;
+}
+
+
+.contactpage h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+.bruh {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+
+.ig, .fb {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.s{
+    width: 32px;
+    height: 30px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.contactpage img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #00AAFF);
+}
+
+
+/* Button Style */
+.btn1 {
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    color: #C0C0C0;
+    padding: 10px 27px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+
+.btn1:hover {
+    background: #00AAFF;
+    color: #0a0a0a;
+    box-shadow: 0 0 10px #00AAFF;
+   
+}
+
+
+.erm {
+    text-align: left;
+    margin: 30px;
+    list-style-type: none;
+}
+
+
+.erm li {
+    margin: 30px 0;
+
+
+
+
+}
+
+
+.argh {
+    text-align: left;
+    margin: 30px;
+    list-style-type: none;
+}
+
+
+.argh li {
+    margin: 30px 0;
+}
+
+
+#greeting-clock {
+    color: #C0C0C0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    position: absolute; /* Or 'fixed' for consistent positioning */
+    top: 75px; /* Adjust to place it right below the navigation bar */
+    left: 20px; /* Keep it close to the left edge */
+    margin: 0; /* No extra margin since position handles placement */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(1px);
+    transition: 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.flip-card:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.flip-card:nth-child(3){
+    transition-delay: 400ms;
+}
+
+/* Floating Circle Button */
+.contact-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0473aa;
+    color: #C0C0C0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Popup Form */
+  .contact-form-popup {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    background-color:#111111;
+    color: #C0C0C0;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: slideUp 0.3s ease;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .close-btn {
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .contact-form-popup input,
+  .contact-form-popup textarea {
+    width: 100%;
+    margin-bottom: 0.7rem;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .contact-form-popup button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0473aa;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .contact-form-popup button:hover {
+    background-color: #0473aa;
+  }
+  

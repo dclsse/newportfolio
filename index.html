@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+        
+        <section id="home">
+            <div class="hidden">
+        <div class="homepage">
+            <div class="leftside">
+                <h1>"We all gotta start somewhere."</h1>
+                <p>Hi, I'm Kaith! I'm a 20-year-old Computer Engineering student at the Technological Institute of the Philippines - Manila. I created this website to track my accomplishments, and it's currently a work in progress.</p>
+                <div id="greeting-clock">
+                    <!-- The greeting and time will dynamically update here -->
+                </div>
+            </div>
+            <div class="rightside">
+                <img src="me.jpg" alt="pic">        
+            </div>
+        </div>
+    </div>
+    </section>
+   
+   <section id="about">
+    <div class="hidden">
+    </div class = "aboutpage">
+    <div class="flip-card-container">
+        <div class="flip-card hidden">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p class="title">PROJECTS</p>
+                </div>
+                <div class="flip-card-back">
+                    <button class="btn1">Coming Soon...</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-card hidden">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p class="title">SKILLS</p>
+                </div>
+                <div class="flip-card-back">
+                    <ul class="erm">
+                        <li>Web Development</li>
+                        <li>Programming Languages</li>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Adaptability</li>
+                        <li>Analytical Thinking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-card hidden">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p class="title">INTERESTS</p>
+                </div>
+                <div class="flip-card-back">
+                    <ul class ="argh">
+                        <li>Gaming</li>
+                        <li>Fitness</li>
+                        <li>Playing guitar</li>
+                        <li>Listening to music</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+ 
+   
+    <section id = "contact">
+        <div class="hidden">
+        <div class="contactpage">
+            <div class="right">
+                <h4 class="bruh">Connect with me</h4>
+                <a href="https://www.facebook.com/share/1EVDmDW7ZK/"><img src="facebooklogo.png" alt="fblogo" class = "fb"></a>
+                <a href="https://www.instagram.com/vkaldr?igsh=OThvdzVnaXFiaTBs"><img src="instagramlogo.png" alt="instagram" class = "ig"></a>
+                <a href="https://open.spotify.com/user/vkfqe89t8iv3bnh4upsirs4t6?si=4TyAVmztQxGFDT2hkCvAFA"><img src="spotifylogo.png" alt="spotify" class = "s"></a>
+            </div>
+            <footer style="text-align: center; padding: 20px; color: #aaa; font-size: 14px;">
+                Copyright &copy; 2025. Kaith Villas
+              </footer>
+        </div>
+    </div>
+    </section>
+
+ 
+    <div id="contactToggle" class="contact-toggle">
+        <i class="fas fa-envelope"></i>
+    </div>
+    
+    <!-- Contact Form Popup -->
+    <div id="contactFormPopup" class="contact-form-popup">
+        <div class="form-header">
+            <span>Get in Touch</span>
+            <span id="closeForm" class="close-btn">&times;</span>
+        </div>
+        <form id="contactForm"> <!-- Add ID here -->
+            <input type="text" name="name" placeholder="First Name" required />
+            <input type="text" name="last_name" placeholder="Last Name" required />
+            <input type="tel" name="mobile" placeholder="Mobile Number" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+    <script src="config.js"></script> <!-- Link to your config.js file -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
