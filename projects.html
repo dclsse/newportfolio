@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #000;
+      color: #e8e8e8;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #0974f1;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* Custom Uiverse Card Style */
+    .card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 300px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      padding: 32px;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #212121;
+      border: 2px solid #313131;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .card:hover {
+      box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+      border-color: #0974f1;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      color: #e8e8e8;
+      width: 100%;
+    }
+
+    .content .heading {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .content .para {
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .content a {
+      color: #e8e8e8;
+      text-decoration: none;
+      
+      margin-right: 15px;
+    }
+
+    .content a i {
+      margin-right: 8px;
+    }
+
+    .content .btn {
+      color: #e8e8e8;
+      text-decoration: none;
+      padding: 10px 16px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      background: #0974f1;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .content .btn:hover {
+      outline: 2px solid #e8e8e8;
+      background: transparent;
+      color: #e8e8e8;
+    }
+
+    .content .btn:active {
+      box-shadow: none;
+    }
+
+    .content a.github-link:hover {
+  color: #0974f1;
+  text-shadow: 0 0 2px #0974f1, 0 0 5px #0974f1;
+  transition: all 0.3s ease;
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>Project Compilation</h1>
+
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">LED Control with Firebase</div>
+            <div class="para">Control LEDs using ESP8266 and Firebase.</div>
+            <div>
+                <a href="https://github.com/dclsse/LED-Control-with-Firebase" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">Inventory Management System</div>
+            <div class="para">A real-time system dashboard for tracking and managing stock levels.</div>
+            <div>
+                <a href="https://github.com/dclsse/Inventory-Management-System" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">2 Channel Relay Module</div>
+            <div class="para">Followed an online reference to recreate the schematic and PCB layout for a 2-channel relay module using KiCad.</div>
+            <div>
+                <a href="https://github.com/dclsse/2ChannelRelayModule" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">C++ Text-Based Game</div>
+            <div class="para">Created a text-based game using C++ and implemented quicksort, heapsort, insertion sort, greedy algorithm, while loop for input validation, and direct access (array indexing) algorithms.</div>
+            <div>
+                <a href="https://github.com/dclsse/data-structures-text-based-game" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">Arduino-Based Robotic Arm</div>
+            <div class="para">Assembled a robotic arm kit and programmed it using Arduino to control servo motor movements.</div>
+            <div>
+                <a href="https://github.com/dclsse/Arduino-Based-Robotic-Arm" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">Student Record Management System</div>
+            <div class="para">Created a Python program that connects to an online database to insert and search student records using a GUI interface.</div>
+            <div>
+                <a href="https://github.com/dclsse/Student-Record-Management-System" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">Queue Implementation in C++</div>
+            <div class="para">A C++ program that uses the STL queue data structure to allow users to add, search, delete, and display string elements through a console-based menu.</div>
+            <div>
+                <a href="https://github.com/dclsse/Queue-Implementation" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">Simple Registration System and Text-Based Game in C++</div>
+            <div class="para">A C++ program with a basic registration system using arrays and a simple text-based game using functions and control structures.</div>
+            <div>
+                <a href="https://github.com/dclsse/Simple-Registration-System-and-Text-Based-Game-" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="content">
+            <div class="heading">3D modeling in AutoCAD</div>
+            <div class="para">Created detailed AutoCAD drawing of a dumbbell.</div>
+            <div>
+                <a href="https://github.com/dclsse/3D-modeling-in-AutoCAD" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>GitHub
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

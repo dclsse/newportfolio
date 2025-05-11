@@ -16,6 +16,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
+            
         </ul>
     </nav>
         
@@ -25,9 +26,7 @@
             <div class="leftside">
                 <h1>"We all gotta start somewhere."</h1>
                 <p>Hi, I'm Kaith! I'm a 20-year-old Computer Engineering student at the Technological Institute of the Philippines - Manila. I created this website to track my accomplishments, and it's currently a work in progress.</p>
-                <div id="greeting-clock">
-                    <!-- The greeting and time will dynamically update here -->
-                </div>
+               
             </div>
             <div class="rightside">
                 <img src="me.jpg" alt="pic">        
@@ -35,21 +34,28 @@
         </div>
     </div>
     </section>
+
+    
    
    <section id="about">
     <div class="hidden">
-    </div class = "aboutpage">
+       
+    <div class = "aboutpage">
+        <h2 class="about-title">ABOUT ME</h2>
     <div class="flip-card-container">
         <div class="flip-card hidden">
             <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p class="title">PROJECTS</p>
-                </div>
-                <div class="flip-card-back">
-                    <button class="btn1">Coming Soon...</button>
-                </div>
+              <div class="flip-card-front">
+                <p class="title">PROJECTS AND ACHIEVEMENTS</p>
+              </div>
+              <div class="flip-card-back">
+                <a href="projects.html" class="view-more-btn" target="_blank">View Projects</a><br>
+                <a href=""></a>
+              </div>
+              
             </div>
-        </div>
+          </div>
+          
     
         <div class="flip-card hidden">
             <div class="flip-card-inner">
@@ -79,6 +85,7 @@
                         <li>Fitness</li>
                         <li>Playing guitar</li>
                         <li>Listening to music</li>
+                        <li>Geography</li>
                     </ul>
                 </div>
             </div>
@@ -88,6 +95,12 @@
     </div>
 </section>
 
+  
+      <!-- Add more project cards as needed -->
+    </div>
+</div>
+  </section>
+  
  
    
     <section id = "contact">
@@ -98,6 +111,7 @@
                 <a href="https://www.facebook.com/share/1EVDmDW7ZK/"><img src="facebooklogo.png" alt="fblogo" class = "fb"></a>
                 <a href="https://www.instagram.com/vkaldr?igsh=OThvdzVnaXFiaTBs"><img src="instagramlogo.png" alt="instagram" class = "ig"></a>
                 <a href="https://open.spotify.com/user/vkfqe89t8iv3bnh4upsirs4t6?si=4TyAVmztQxGFDT2hkCvAFA"><img src="spotifylogo.png" alt="spotify" class = "s"></a>
+                <a href="https://www.linkedin.com/in/kaith-villas-36720424b"><img src="linkedinlogo.png" alt="linkedin" class="lin"></a>
             </div>
             <footer style="text-align: center; padding: 20px; color: #aaa; font-size: 14px;">
                 Copyright &copy; 2025. Kaith Villas
@@ -105,8 +119,7 @@
         </div>
     </div>
     </section>
-
- 
+    
     <div id="contactToggle" class="contact-toggle">
         <i class="fas fa-envelope"></i>
     </div>
@@ -127,8 +140,8 @@
         </form>
     </div>
     
-    <script src="config.js"></script> <!-- Link to your config.js file -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="config.js"></script> <!-- Link to your config.js file -->
     <script src="script.js"></script>
 </body>
 </html>
