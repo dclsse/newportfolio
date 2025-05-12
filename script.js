@@ -43,6 +43,14 @@ if (typeof EMAILJS_CONFIG !== "undefined") {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // ✅ Check if reCAPTCHA is completed
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        alert("Please verify you're not a robot.");
+        return;
+      }
+
+      // ✅ Send form with EmailJS
       emailjs
         .sendForm(
           EMAILJS_CONFIG.SERVICE_ID,
@@ -52,6 +60,7 @@ if (typeof EMAILJS_CONFIG !== "undefined") {
         .then(() => {
           alert("Message sent successfully!");
           this.reset();
+          grecaptcha.reset(); // Optional: reset reCAPTCHA after success
         })
         .catch((error) => {
           alert("Failed to send. Please try again.");
